@@ -3,6 +3,7 @@ from django.views import View
 from .algorithms.decryption import decrypt
 from .algorithms.graph import find_node
 from .algorithms.get_marked import get_marked
+from .algorithms.data import g
 import json
 # Create your views here.
 class home(View):
@@ -12,11 +13,15 @@ class home(View):
         #Load input from frontend
         encrypted_text = request.POST['encrypted_text']
         key = request.POST['key'].upper()
-        graph = json.loads(request.POST['graph'].lower())
+        graph = g
+        if request.POST['graph'].strip() != '':
+            graph = json.loads(request.POST['graph'].lower())
         #Process input
         decrypted_text = decrypt(encrypted_text, key)
         marked = get_marked(graph, decrypted_text.lower())
-        location = find_node(graph)
+        print(marked)
+        location = find_node(graph, marked)
+        print(location)
         #Add output to session
         request.session['encrypted_text'] = encrypted_text
         request.session['location'] = location

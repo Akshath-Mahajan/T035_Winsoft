@@ -11,7 +11,8 @@
         <div id="particles-js"></div>
         <div class="overlay">
             <div class="container">
-            <form>
+            <form method="POST">
+                {%csrf_token%}
                 <label class="label" ><b>Enter the encrypted message</b></label><br>
                 <input type="text" class="form-control" required placeholder="encrpyted text" name="encrypted_text"><br>
                 <label class="label" ><b>Key</b></label><br>
