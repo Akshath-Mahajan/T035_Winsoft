@@ -1,19 +1,11 @@
 import collections
-#dist = collections.defaultdict(lambda: float('inf'))
-pred = collections.defaultdict(lambda: 0)
 # BFS algorithm
 def bfs(graph, root, dest, dist):
     dist[root] = 0
     visited, queue = set(), collections.deque([root])
     visited.add(root)
     while queue:
-        
-        # Dequeue a vertex from queue
         vertex = queue.popleft()
-        #print(str(vertex) + " ", end="")
-
-        # If not visited, mark it as visited, and
-        # enqueue it
         for neighbour in graph[vertex]:
             if neighbour not in visited:
                 dist[neighbour] = dist[vertex] + 1
@@ -23,7 +15,8 @@ def bfs(graph, root, dest, dist):
                 if neighbour == dest:
                     return True,dist
     return False,dist
-def find_node(graph, marked ):
+
+def find_node(graph, marked):
     result = [[0,float('inf')]]
     for vertex in graph.keys():
         if vertex in marked:
@@ -43,9 +36,6 @@ def find_node(graph, marked ):
         elif result_now[1]==result[0][1]:
             result.append([result_now[0],result_now[1]])    
     return result
-    
-    
-
 
 graph = {0: [1, 2, 3], 1: [0,2], 2: [0,4], 3:[0], 4:[2]}
 marked = [3, 4]
