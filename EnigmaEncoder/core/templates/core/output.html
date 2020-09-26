@@ -13,12 +13,17 @@
     <div id="particles-js"></div>
     <div class="overlay">
         <div class=" container mt-4">
-            <h2 class="text-white text-center">Enigma Encoder</h2>
+            <h2 class="text-white text-center">Enigma Decoder</h2>
             <div class="wrapper vcenter-item">
                 <div class="box"><h4>The encrpyted message is : {{request.session.encrypted_text}}</h4></div>
                 <div class="box"><h4>The decrpyted message is : {{request.session.decrypted_text}}</h4></div>
-                <div class="box"><h4>The optimal place for the army is : {{request.session.location}}</h4></div>
-            <div class="box"><h4>At an average distance of :</h4></div>   
+                <div class="box"><h4>The optimal place for the army is : 
+                        {%for i in request.session.location%}
+                            {{i.0|title}}&nbsp
+                        {%endfor%}
+                    </h4>
+                </div>
+            <div class="box"><h4>At a total distance of : {{request.session.location.0.1}} hops</h4></div>   
             </div>
         </div>
     </div>
