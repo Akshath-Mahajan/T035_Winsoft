@@ -9,12 +9,13 @@
     </head>
     <body>
         <div class="container">
-        <form>
+        <form method="POST">
+            {%csrf_token%}
             <label class="label" ><b>Enter the code</b></label><br>
-            <input type="text" class="form-control" required placeholder=""><br>
+            <input name="encrypted_text" type="text" class="form-control" required placeholder="Enter the encoded message here"><br>
 
-            <p id="message" class="label"><b>Enter</b></p>
-            <textarea name="message" class="form-control" rows="4"></textarea>
+            <p id="message" class="label"><b>Enter Custom Graph Graph</b></p>
+            <textarea name="graph" class="form-control" rows="4" placeholder="Enter a graph here"></textarea>
 
             <input type="submit" value="Submit" class="btn" >
         </form>
