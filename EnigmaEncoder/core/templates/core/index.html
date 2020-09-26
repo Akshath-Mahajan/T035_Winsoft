@@ -10,12 +10,12 @@
     <body>
         <div class="container">
         <form>
-            <label class="label" ><b>Enter the code</b></label><br>
-            <input type="text" class="form-control" required placeholder="encrpyted text"><br>
+            <label class="label" ><b>Enter the encrypted message</b></label><br>
+            <input type="text" class="form-control" required placeholder="encrpyted text" name="encrypted_text"><br>
             <label class="label" ><b>Key</b></label><br>
-            <input type="text" class="form-control" required placeholder="key"><br>
-            <p id="message" class="label"><b>Enter</b></p>
-            <textarea name="message" class="form-control" rows="4" placeholder="leave Empty for default graph"></textarea>
+            <input type="text" class="form-control" required placeholder="key" name="key"><br>
+            <p id="message" class="label"><b>Input graph as json</b></p>
+            <textarea name="graph" class="form-control" rows="4" placeholder="leave empty for default graph"></textarea>
             <input type="submit" value="Submit" class="btn" >
         </form>
         </div>

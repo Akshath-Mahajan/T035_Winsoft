@@ -30,10 +30,10 @@
     <div class=" container mt-4">
         <h2>Enigma Encoder</h2>
         <div class="wrapper vcenter-item">
-            <div class="box"><h4>The encrpyted message is :</h4></div>
-            <div class="box"><h4>The decrpyted message is :</h4></div>
-            <div class="box"><h4>The optimal place for the army is :</h4></div>
-           <div class="box"><h4>At an average distance of:</h4></div>   
+            <div class="box"><h4>The encrpyted message is : {{request.session.encrypted_text}}</h4></div>
+            <div class="box"><h4>The decrpyted message is : {{request.session.decrypted_text}}</h4></div>
+            <div class="box"><h4>The optimal place for the army is : {{request.session.location}}</h4></div>
+           <div class="box"><h4>At an average distance of :</h4></div>   
         </div>
     </div>
 </body>
