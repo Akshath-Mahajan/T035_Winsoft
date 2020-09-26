@@ -8,6 +8,7 @@ g = {
 	"rezang la":["sia la","indira col","pensi la","tanglang la"],
 	"pensi la":["rezang la","marsimik la"],
 	"tanglang la":["rezang la","marsimik la"],
-	"indira col":["rezang la", "gyong la"]
+	"indira col":["rezang la", "gyong la"],
+	"marsimik la":["pensi la","tanglang la"]
 }
 

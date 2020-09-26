@@ -20,7 +20,7 @@ def find_node(graph, marked):
     result = [[0,float('inf')]]
     for vertex in graph.keys():
         if vertex in marked:
-            break
+            continue
         result_now = [0,0]
         result_now[0] = vertex
         for mark in marked:
@@ -28,7 +28,6 @@ def find_node(graph, marked):
             (is_connected, dist_from_vertex) = bfs(graph, vertex, mark, distance)
             if(is_connected):
                 result_now[1] += dist_from_vertex[mark]
-                print('dist of {0} from {1}'.format(vertex, mark),result_now[1])
         if result_now[1] < result[0][1] and result_now[0] not in marked:
             result.clear()
             result = [[0,0]]

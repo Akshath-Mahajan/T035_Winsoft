@@ -19,9 +19,7 @@ class home(View):
         #Process input
         decrypted_text = decrypt(encrypted_text, key)
         marked = get_marked(graph, decrypted_text.lower())
-        print(marked)
         location = find_node(graph, marked)
-        print(location)
         #Add output to session
         request.session['encrypted_text'] = encrypted_text
         request.session['location'] = location
