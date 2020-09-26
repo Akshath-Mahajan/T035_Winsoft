@@ -36,9 +36,3 @@ def find_node(graph, marked):
         elif result_now[1]==result[0][1]:
             result.append([result_now[0],result_now[1]])    
     return result
-
-graph = {0: [1, 2, 3], 1: [0,2], 2: [0,4], 3:[0], 4:[2]}
-marked = [3, 4]
-# dist = collections.defaultdict(lambda: float('inf'))
-# bfs(graph, 0, 4, dist)
-print(find_node(graph,marked))

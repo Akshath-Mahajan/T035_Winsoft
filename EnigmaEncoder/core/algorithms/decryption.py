@@ -1,6 +1,5 @@
 import numpy as np
-encrypted_string = "Cnwvtus KuaiTaa rlodeeurethn  an Ia_mrhs baer oag ndC_a aeoat dLj lLdio_me  p  hagZLngan _"
-key = "DELHI"
+
 def remove_double_space(string):
     temp = string.split(' ')
     temp = [i for i in temp if i]
@@ -23,6 +22,3 @@ def decrypt(enc, key):
     arr = np.array(arr).T
     arr = arr.flatten()
     return remove_double_space(''.join(arr).rstrip('_'))
-
-a = decrypt(encrypted_string, key)
-print(a)
