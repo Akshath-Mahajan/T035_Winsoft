@@ -1,0 +1,12 @@
+{
+	"Khardung La":["Lachulung La","Gyong La","Sasser Pass"],
+	"Lachulung La":["Sia La","Khardung La"],
+	"Sia La":["Sasser Pass","Lachulung La","Rezang La"],
+	"Sasser Pass":["Zoji La","Khardung La","Sia La"],
+	"Gyong La":["Khardung La","Indira Col","Zoji La"],
+	"Zoji La":["Sasser Pass","Gyong La"],
+	"Rezang La":["Sia La","Indira Col","Pensi La","Tanglang La"],
+	"Pensi La":["Rezang La","Marsimik La"],
+	"Tanglang La":["Rezang La","Marsimik La"]
+}
+
