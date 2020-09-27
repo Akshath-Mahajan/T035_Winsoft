@@ -14,19 +14,22 @@
             <form method="POST">
                 {%csrf_token%}
                 <label class="label" ><b>Enter the encrypted message</b></label><br>
-                <input type="text" class="form-control" required placeholder="encrpyted text" name="encrypted_text"><br>
+                <input type="text" class="form-control" required placeholder="Encrpyted text" name="encrypted_text"><br>
                 <label class="label" ><b>Key</b></label><br>
-                <input type="text" class="form-control" required placeholder="key" name="key"><br>
+                <input type="text" class="form-control" required placeholder="Key" name="key"><br>
                 <p id="message" class="label"><b>Input graph as json</b></p>
-                <textarea name="graph" class="form-control" rows="5" placeholder='leave empty for default graph 
-                input format :
-                {
-                    "place1":["place2","place3"],
-                    "place2":["place1"],
-                    "place3":["place1","place4"],
-                    "place4":["place3"]
-                }'></textarea>
-                <input type="submit" value="Submit" class="btn" >
+                <textarea name="graph" class="form-control" rows="5" 
+                placeholder='Leave empty for default graph.
+                
+Input format :
+{
+    "place1":["place2","place3"],
+    "place2":["place1"],
+    "place3":["place1","place4"],
+    "place4":["place3"]
+}'></textarea>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <a href="{%url 'logout'%}" class="btn btn-danger">Logout</a>
             </form>
             </div>
         </div>

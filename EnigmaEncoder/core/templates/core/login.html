@@ -11,14 +11,21 @@
         <div id="particles-js"></div>
         <div class="overlay">
             <div class="container">
+            {%if user.is_authenticated%}
+            <div class="container d-flex flex-column">
+                Already logged in as {{user.username}}
+                <a href="{%url 'logout'%}" class="btn btn-danger">Logout</a>
+            </div>
+            {%else%}
             <form method="POST">
                 {%csrf_token%}
-                <label class="label" ><b>User Id</b></label><br>
-                <input type="text" class="form-control" required placeholder="" name="user_id"><br>
+                <label class="label" ><b>Username</b></label><br>
+                <input type="text" class="form-control" required placeholder="Enter a username" name="username"><br>
                 <label class="label" ><b>Password</b></label><br>
-                <input type="password" class="form-control" required placeholder="password" name="passowrd"><br>
-                <input type="submit" value="Submit" class="btn" >
+                <input type="password" class="form-control" required placeholder="Enter a password" name="password"><br>
+                <input type="submit" value="Submit" class="btn btn-success" >
             </form>
+            {%endif%}
             </div>
         </div>
     </body>

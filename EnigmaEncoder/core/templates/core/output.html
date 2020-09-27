@@ -15,15 +15,16 @@
         <div class=" container mt-4">
             <h2 class="text-white text-center">Enigma Decoder</h2>
             <div class="wrapper vcenter-item">
-                <div class="box"><h4>The encrpyted message is : {{request.session.encrypted_text}}</h4></div>
-                <div class="box"><h4>The decrpyted message is : {{request.session.decrypted_text}}</h4></div>
-                <div class="box"><h4>The optimal place for the army is : 
+                <div class="box"><h4>The encrpyted message is : </h4><p class="text-monospace font-weight-bold">{{request.session.encrypted_text}}</p></div>
+                <div class="box"><h4>The decrpyted message is : </h4><p class="text-monospace font-weight-bold">{{request.session.decrypted_text}}</p></div>
+                <div class="box"><h4>The optimal place for the army is : </h4>
+                    <p class="text-monospace font-weight-bold">    
                         {%for i in request.session.location%}
                             {{i.0|title}}&nbsp
                         {%endfor%}
-                    </h4>
+                    </p>
                 </div>
-            <div class="box"><h4>At a total distance of : {{request.session.location.0.1}} hops</h4></div>   
+            <div class="box"><h4>At a total distance of : </h4> <p class="text-monospace font-weight-bold">{{request.session.location.0.1}} hops</p></div>   
             </div>
         </div>
     </div>
