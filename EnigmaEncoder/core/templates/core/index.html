@@ -18,7 +18,14 @@
                 <label class="label" ><b>Key</b></label><br>
                 <input type="text" class="form-control" required placeholder="key" name="key"><br>
                 <p id="message" class="label"><b>Input graph as json</b></p>
-                <textarea name="graph" class="form-control" rows="4" placeholder="leave empty for default graph"></textarea>
+                <textarea name="graph" class="form-control" rows="5" placeholder='leave empty for default graph 
+                input format :
+                {
+                    "place1":["place2","place3"],
+                    "place2":["place1"],
+                    "place3":["place1","place4"],
+                    "place4":["place3"]
+                }'></textarea>
                 <input type="submit" value="Submit" class="btn" >
             </form>
             </div>
